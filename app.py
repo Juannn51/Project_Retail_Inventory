@@ -792,7 +792,7 @@ with tab4:
         st.markdown('<div class="section-header">🗺️ Risk Matrix (Probabilitas × Dampak)</div>', unsafe_allow_html=True)
 
         risks = {
-            'Risiko': ['User Adoption Risk', 'Concept Drift Risk', 'Data Quality Risk',
+            'Risiko': ['User Adoption Risk', 'Concept Drift Risk',
                        'Infrastructure Failure', 'Regulatory/Privacy Risk'],
             'Probabilitas': [4, 3, 2, 2],
             'Dampak': [5, 5, 4, 3],
@@ -861,6 +861,7 @@ with tab4:
             </div>
         </div>
         """, unsafe_allow_html=True)
+
 
 # ══════════════════════════════════════════
 # TAB 5 — DEPLOYMENT & MONITORING
