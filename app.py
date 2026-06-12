@@ -794,8 +794,8 @@ with tab4:
         risks = {
             'Risiko': ['User Adoption Risk', 'Concept Drift Risk', 'Data Quality Risk',
                        'Infrastructure Failure', 'Regulatory/Privacy Risk'],
-            'Probabilitas': [4, 3, 3, 2, 2],
-            'Dampak': [5, 5, 4, 4, 3],
+            'Probabilitas': [4, 3, 2, 2],
+            'Dampak': [5, 5, 4, 3],
         }
         df_risk = pd.DataFrame(risks)
         df_risk['Skor'] = df_risk['Probabilitas'] * df_risk['Dampak']
@@ -861,23 +861,6 @@ with tab4:
             </div>
         </div>
         """, unsafe_allow_html=True)
-
-        st.markdown("""
-        <div class="risk-card">
-            <span class="risk-tag-med">🟡 SEDANG — Skor 12</span>
-            <div class="team-role">Risiko 3: Kualitas Data Historis Buruk</div>
-            <div class="team-desc" style="margin-top:6px;">
-                <strong style="color:#94a3b8;">Deskripsi:</strong> Data ERP/POS memiliki nilai hilang, duplikat, atau
-                kesalahan entry yang signifikan pada periode tertentu.<br><br>
-                <strong style="color:#94a3b8;">Dampak:</strong> Hasil rekayasa fitur bias → model tidak bisa mencapai target MAPE.<br><br>
-                <strong style="color:#94a3b8;">Mitigasi:</strong><br>
-                ① <em>Data Quality Dashboard:</em> Monitor completeness, consistency & accuracy secara otomatis.<br>
-                ② <em>Validasi SME:</em> Data Scientist & SME melakukan validasi manual per anomali terdeteksi.<br>
-                ③ <em>Data Contract:</em> SLA kualitas data ditandatangani bersama tim IT/Data Owner.
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-
 
 # ══════════════════════════════════════════
 # TAB 5 — DEPLOYMENT & MONITORING
